@@ -41,7 +41,7 @@ class FrontPage extends Component {
   onBreedSelectChange = e => {
     let selectedBreed = e.target.value;
     this.setState({ selected_breed: selectedBreed });
-    this.getCatsImagesByBreed(this.state.selected_breed, 5);
+    this.getCatsImagesByBreed(selectedBreed, 5);
   };
 
   componentDidMount = () => {
