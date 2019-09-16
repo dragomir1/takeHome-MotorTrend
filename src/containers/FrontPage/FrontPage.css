@@ -1,0 +1,30 @@
+.Main {
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.Box-field {
+  margin-top: 20px;
+  width: 50%;
+  display: inline-block;
+  overflow-y: scroll;
+  max-height: 500px;
+}
+
+.CatImage {
+  max-width: 35%;
+  max-height: 35%;
+  border: 1px solid black;
+}
+.CatImageFav {
+  max-width: 35%;
+  max-height: 35%;
+  border: 1px solid black;
+}
+
+.Button {
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
+  background-color: #b3d9ff;
+}
