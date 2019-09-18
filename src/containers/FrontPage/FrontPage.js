@@ -44,6 +44,12 @@ class FrontPage extends Component {
     this.getCatsImagesByBreed(selectedBreed, 5);
   };
 
+  onDeleteFavorite = imageId => {
+    const deleteImages = [...this.state.favedImages];
+    deleteImages.splice(imageId, 1);
+    this.setState({ favedImages: deleteImages });
+  };
+
   componentDidMount = () => {
     this.getBreeds();
   };
@@ -51,12 +57,17 @@ class FrontPage extends Component {
   render() {
     let favedItems;
     if (this.state.favoriteImage) {
-      favedItems = this.state.favedImages.map(fav => {
+      favedItems = this.state.favedImages.map((fav, index) => {
         return (
           <FavoritePicks>
             <ul>
               <img className='CatImageFav' key={fav.id} alt='' src={fav.url} />
             </ul>
+            <button
+              className='Button'
+              onClick={() => this.onDeleteFavorite(index)}>
+              delete
+            </button>
           </FavoritePicks>
         );
       });
